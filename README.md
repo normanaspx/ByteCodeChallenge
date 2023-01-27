@@ -8,6 +8,7 @@
 - Dependency injection Hilt 
 - Room Database 
 - Recyclerview
+- Navigation components
 
 ## Caracteristicas
 - Listado de postres
