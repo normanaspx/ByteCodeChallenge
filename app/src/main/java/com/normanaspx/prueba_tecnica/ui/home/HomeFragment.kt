@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentMealBinding.bind(view)
 
-        viewModel.movieResponse.observe(
+        viewModel.serviceResponse.observe(
             viewLifecycleOwner
         ){
             when(it) {

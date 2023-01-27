@@ -14,17 +14,17 @@ import javax.inject.Inject
 @HiltViewModel
 class DessertViewModel  @Inject constructor(private val dessertRepository: DessertRepository) : ViewModel() {
 
-    private var _movieResponse = MutableLiveData<Response<List<Dessert>>>()
-    val movieResponse: LiveData<Response<List<Dessert>>> = _movieResponse
+    private var _serviceResponse = MutableLiveData<Response<List<Dessert>>>()
+    val serviceResponse: LiveData<Response<List<Dessert>>> = _serviceResponse
 
     init {
-        fetchAllMovies()
+        getData()
     }
 
-    private fun fetchAllMovies() {
+    private fun getData() {
         viewModelScope.launch {
             dessertRepository.getDessertsFromNetwork().collect {
-                _movieResponse.postValue(it)
+                _serviceResponse.postValue(it)
             }
         }
     }
