@@ -15,4 +15,5 @@ ext {
     lifecycle_version = "2.6.0-alpha03"
     room_version = "2.3.0"
     coroutines_version = "1.2.1"
+    cardview_version = "1.0.0"
 }
